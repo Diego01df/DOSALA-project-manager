@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { HashRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import { onAuthStateChanged, User } from 'firebase/auth';
+// Fix: Use types and methods from firebase compat
+import firebase from 'firebase/compat/app';
 import { auth, isFirebaseConfigured } from './services/firebase';
 
 import Sidebar from './components/Sidebar';
@@ -18,7 +19,7 @@ type Theme = 'light' | 'dark';
 interface AppContextType {
     theme: Theme;
     toggleTheme: () => void;
-    user: User | null;
+    user: firebase.User | null;
 }
 
 export const AppContext = createContext<AppContextType | null>(null);
@@ -75,7 +76,7 @@ const App: React.FC = () => {
         return (storedTheme as Theme) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     });
 
-    const [user, setUser] = useState<User | null>(null);
+    const [user, setUser] = useState<firebase.User | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -83,7 +84,8 @@ const App: React.FC = () => {
             setLoading(false);
             return;
         }
-        const unsubscribe = onAuthStateChanged(auth!, (currentUser) => {
+        // Fix: Use onAuthStateChanged method from the auth service instance
+        const unsubscribe = auth!.onAuthStateChanged((currentUser) => {
             setUser(currentUser);
             setLoading(false);
         });
