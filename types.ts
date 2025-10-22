@@ -1,3 +1,4 @@
+
 export enum ProjectType {
   Residential = 'Residential',
   Multifamily = 'Multifamily',

@@ -1,11 +1,91 @@
-// This file previously contained static mock data for clients and projects.
-// The application has been fully migrated to use Google Firestore as its database.
-// The data that was in this file should be entered into your Firestore database
-// by following the steps in `firebase-setup-instructions.md`.
-//
-// This file is no longer used by the application and can be safely deleted.
 
-import { Client, Project } from './types';
+import { Client, Project, ProjectPhase, ProjectType } from './types';
 
-export const CLIENTS: Client[] = [];
-export const PROJECTS: Project[] = [];
+export const CLIENTS: Client[] = [
+  {
+    id: 'c1',
+    name: 'Kevin Phillips',
+    company: 'Phillips Innovations',
+    email: 'kevin.p@innovate.com',
+    phone: '310-555-0101',
+    address: '123 Ocean View, Malibu, CA 90265',
+  },
+  {
+    id: 'c2',
+    name: 'Aria Montgomery',
+    email: 'aria.mont@gmail.com',
+    phone: '415-555-0102',
+    address: '456 Hillside Dr, San Francisco, CA 94102',
+  },
+  {
+    id: 'c3',
+    name: 'Brighton Hospitality',
+    company: 'Brighton Group',
+    email: 'contact@brightonhotels.com',
+    phone: '213-555-0103',
+    address: '789 Downtown Ave, Los Angeles, CA 90012',
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'p1',
+    name: 'Malibu Residence',
+    year: 2024,
+    location: 'Malibu, CA',
+    clientId: 'c1',
+    type: ProjectType.Residential,
+    phase: ProjectPhase.CA,
+    description: 'A modern beachfront residence with expansive glass walls and sustainable materials.',
+    team: ['A. Garcia', 'J. Chen'],
+    images: ['https://picsum.photos/seed/p1/800/600', 'https://picsum.photos/seed/p1-2/800/600'],
+  },
+  {
+    id: 'p2',
+    name: 'SOMA Loft Conversion',
+    year: 2023,
+    location: 'San Francisco, CA',
+    clientId: 'c2',
+    type: ProjectType.Interior,
+    phase: ProjectPhase.Completed,
+    description: 'Interior renovation of a historic warehouse into a modern, open-plan living space.',
+    team: ['S. Miller', 'A. Garcia'],
+    images: ['https://picsum.photos/seed/p2/800/600'],
+  },
+  {
+    id: 'p3',
+    name: 'The Brighton Hotel',
+    year: 2024,
+    location: 'Los Angeles, CA',
+    clientId: 'c3',
+    type: ProjectType.Hospitality,
+    phase: ProjectPhase.DD,
+    description: 'A new 12-story boutique hotel in the heart of downtown LA, featuring a rooftop bar and pool.',
+    team: ['A. Garcia', 'J. Chen', 'M. Rodriguez'],
+    images: ['https://picsum.photos/seed/p3/800/600', 'https://picsum.photos/seed/p3-2/800/600'],
+  },
+  {
+    id: 'p4',
+    name: 'Venice Beach Bungalow',
+    year: 2023,
+    location: 'Venice, CA',
+    clientId: 'c1',
+    type: ProjectType.Residential,
+    phase: ProjectPhase.Completed,
+    description: 'A complete remodel and extension of a classic 1920s California bungalow.',
+    team: ['S. Miller'],
+    images: ['https://picsum.photos/seed/p4/800/600'],
+  },
+  {
+    id: 'p5',
+    name: 'Downtown Commercial Tower',
+    year: 2025,
+    location: 'Los Angeles, CA',
+    clientId: 'c3',
+    type: ProjectType.Commercial,
+    phase: ProjectPhase.Concept,
+    description: 'Early concept design for a 40-story mixed-use commercial office building.',
+    team: ['A. Garcia', 'M. Rodriguez'],
+    images: ['https://picsum.photos/seed/p5/800/600'],
+  },
+];
