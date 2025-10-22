@@ -1,4 +1,3 @@
-
 import { Client, Project, ProjectPhase, ProjectType } from './types';
 
 export const CLIENTS: Client[] = [
@@ -36,9 +35,9 @@ export const PROJECTS: Project[] = [
     clientId: 'c1',
     type: ProjectType.Residential,
     phase: ProjectPhase.CA,
-    description: 'A modern beachfront residence with expansive glass walls and sustainable materials.',
+    description: 'A modern beachfront residence with expansive glass walls and sustainable materials. The design emphasizes a seamless connection between the indoor and outdoor spaces, featuring a large deck, infinity pool, and direct beach access. The interior is characterized by a minimalist aesthetic with natural wood and stone finishes.',
     team: ['A. Garcia', 'J. Chen'],
-    images: ['https://picsum.photos/seed/p1/800/600', 'https://picsum.photos/seed/p1-2/800/600'],
+    images: ['https://picsum.photos/seed/p1/800/600', 'https://picsum.photos/seed/p1-2/800/600', 'https://picsum.photos/seed/p1-3/800/600', 'https://picsum.photos/seed/p1-4/800/600'],
   },
   {
     id: 'p2',
@@ -48,9 +47,9 @@ export const PROJECTS: Project[] = [
     clientId: 'c2',
     type: ProjectType.Interior,
     phase: ProjectPhase.Completed,
-    description: 'Interior renovation of a historic warehouse into a modern, open-plan living space.',
+    description: 'Interior renovation of a historic warehouse into a modern, open-plan living space. The project preserved original architectural elements like exposed brick walls and timber beams while introducing contemporary fixtures and a custom steel staircase.',
     team: ['S. Miller', 'A. Garcia'],
-    images: ['https://picsum.photos/seed/p2/800/600'],
+    images: ['https://picsum.photos/seed/p2/800/600', 'https://picsum.photos/seed/p2-2/800/600'],
   },
   {
     id: 'p3',
@@ -60,9 +59,9 @@ export const PROJECTS: Project[] = [
     clientId: 'c3',
     type: ProjectType.Hospitality,
     phase: ProjectPhase.DD,
-    description: 'A new 12-story boutique hotel in the heart of downtown LA, featuring a rooftop bar and pool.',
+    description: 'A new 12-story boutique hotel in the heart of downtown LA, featuring a rooftop bar and pool. The facade is a dynamic composition of glass and textured concrete panels, creating a modern landmark. The interiors are inspired by old Hollywood glamour with a contemporary twist.',
     team: ['A. Garcia', 'J. Chen', 'M. Rodriguez'],
-    images: ['https://picsum.photos/seed/p3/800/600', 'https://picsum.photos/seed/p3-2/800/600'],
+    images: ['https://picsum.photos/seed/p3/800/600', 'https://picsum.photos/seed/p3-2/800/600', 'https://picsum.photos/seed/p3-3/800/600', 'https://picsum.photos/seed/p3-4/800/600'],
   },
   {
     id: 'p4',
@@ -72,9 +71,9 @@ export const PROJECTS: Project[] = [
     clientId: 'c1',
     type: ProjectType.Residential,
     phase: ProjectPhase.Completed,
-    description: 'A complete remodel and extension of a classic 1920s California bungalow.',
+    description: 'A complete remodel and extension of a classic 1920s California bungalow. The project added a second story and reconfigured the ground floor to create a light-filled, open living area that connects to a private garden.',
     team: ['S. Miller'],
-    images: ['https://picsum.photos/seed/p4/800/600'],
+    images: ['https://picsum.photos/seed/p4/800/600', 'https://picsum.photos/seed/p4-2/800/600'],
   },
   {
     id: 'p5',
@@ -84,7 +83,7 @@ export const PROJECTS: Project[] = [
     clientId: 'c3',
     type: ProjectType.Commercial,
     phase: ProjectPhase.Concept,
-    description: 'Early concept design for a 40-story mixed-use commercial office building.',
+    description: 'Early concept design for a 40-story mixed-use commercial office building. The design explores innovative structural systems and a high-performance facade to achieve a LEED Platinum rating. The ground level is designed to be an active public plaza.',
     team: ['A. Garcia', 'M. Rodriguez'],
     images: ['https://picsum.photos/seed/p5/800/600'],
   },

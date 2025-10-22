@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, createContext } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
@@ -8,6 +7,8 @@ import Projects from './pages/Projects';
 import Clients from './pages/Clients';
 import ImageEditor from './pages/ImageEditor';
 import Settings from './pages/Settings';
+import ProjectDetail from './pages/ProjectDetail';
+import ClientDetail from './pages/ClientDetail';
 
 type Theme = 'light' | 'dark';
 
@@ -45,7 +46,9 @@ const App: React.FC = () => {
                             <Routes>
                                 <Route path="/" element={<Dashboard />} />
                                 <Route path="/projects" element={<Projects />} />
+                                <Route path="/projects/:projectId" element={<ProjectDetail />} />
                                 <Route path="/clients" element={<Clients />} />
+                                <Route path="/clients/:clientId" element={<ClientDetail />} />
                                 <Route path="/image-editor" element={<ImageEditor />} />
                                 <Route path="/settings" element={<Settings />} />
                             </Routes>
